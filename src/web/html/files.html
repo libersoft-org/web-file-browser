@@ -1,0 +1,12 @@
+<div class="card">
+ <div class="header">Path: {DIR}</div>
+</div>
+<div class="separator"></div>
+<table class="files">
+ <tr>
+  <th><a onclick="sort('name', {ORDER-NAME})">Name {ORDER-NAME-ICON}</a></th>
+  <th><a onclick="sort('modified', {ORDER-DATE})">Last modified {ORDER-DATE-ICON}</a></th>
+  <th class="nowrap"><a onclick="sort('size', {ORDER-SIZE})">Size {ORDER-SIZE-ICON}</a></th>
+ </tr>
+ {ROWS}
+</table>

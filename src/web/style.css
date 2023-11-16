@@ -1,0 +1,141 @@
+:root {
+ --primary: #369;
+ --header-back: #666;
+ --header-front: #DDD;
+ --body: #DDD;
+}
+
+body {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ margin: 10px;
+}
+
+a {
+ cursor: pointer;
+ font-weight: bold;
+ text-decoration: none;
+ color: var(--primary);
+}
+
+.link {
+ cursor: pointer;
+}
+
+.bold {
+ font-weight: bold;
+}
+
+.separator {
+ height: 10px;
+}
+
+.loader {
+ margin: 0 auto;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background:
+  radial-gradient(farthest-side, #000 94%, transparent) top/8px 8px no-repeat,
+  conic-gradient(transparent 30%, #000);
+ -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 8px), #000 0);
+ animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+ 100% {
+  transform: rotate(1turn);
+ }
+}
+
+.card {
+ overflow: hidden;
+ border: 1px solid var(--header-back);
+ border-radius: 10px;
+}
+
+.card .header {
+ padding: 10px;
+ font-weight: bold;
+ color: var(--header-front);
+ background-color: var(--header-back);
+}
+
+.card .header a {
+ color: var(--header-front);
+}
+
+.card .body {
+ padding: 10px;
+ background-color: var(--body);
+}
+
+.progress {
+ position: relative;
+ display: flex;
+ width: 100%;
+ height: 30px;
+ overflow: hidden;
+ border: 1px solid var(--header-back);
+ border-radius: 10px;
+}
+
+.progress .left {
+ height: 100%;
+ background-color: #9DCEFF;
+}
+
+.progress .right {
+ flex-grow: 1;
+ height: 100%;
+ background-color: #FFF;
+}
+
+.progress .percent {
+ position: absolute;
+ width: 100%;
+ line-height: 30px;
+ font-weight: bold;
+ text-align: center;
+}
+
+.files {
+ width: 100%;
+ border-spacing: 0;
+ overflow: hidden;
+ font-size: 14px;
+ border: 1px solid var(--header-back);
+ border-radius: 10px;
+}
+
+.files tr:nth-child(odd) td {
+ background-color: #EEE;
+}
+
+.files tr:nth-child(even) td {
+ background-color: #DDD;
+}
+
+.files tr:hover td {
+ background-color: var(--primary);
+ color: #EEE;
+}
+
+.files th {
+ padding: 10px;
+ text-align: left;
+ color: #EEE;
+ background-color: var(--header-back);
+}
+
+.files th a {
+ color: #EEE;
+}
+
+.files td {
+ padding: 10px;
+}
+
+.files td.name {
+ font-weight: bold;
+ color: var(--primary);
+}
